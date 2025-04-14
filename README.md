@@ -3,9 +3,10 @@
 ## TODO List
 
 ### 🛠️🔧 Data Controller
-- [ ] Make LineEdit as multi-line editor
+
+- [x] Make LineEdit as multi-line editor
 - [ ] Make Array's content can be read and edit
-- [ ] and more... ? 
+- [ ] and more... ?
 
 ---
 ![logo](./docs/assets/logo.png)
