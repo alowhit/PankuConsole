@@ -1,3 +1,13 @@
+# Important: **This is Unofficial Version. I'ill update some function or ui to make this addon suitable for me.**
+
+## TODO List
+
+### 🛠️🔧 Data Controller
+- [ ] Make LineEdit as multi-line editor
+- [ ] Make Array's content can be read and edit
+- [ ] and more... ? 
+
+---
 ![logo](./docs/assets/logo.png)
 
 ---
