@@ -5,7 +5,7 @@ const TEXT_LABEL_MIN_X = 120
 
 @export var container:VBoxContainer
 
-var console: PankuConsole
+var console : PankuConsole
 var objects := []
 var rows_need_update:Array = []
 var row_objects:Array[Object] = []
@@ -36,7 +36,9 @@ func create_rows_from_object(index:int):
 			row_types.append("read_only")
 			rows.append(create_ui_row_read_only(d))
 			continue
-		if d.usage == (PROPERTY_USAGE_SCRIPT_VARIABLE | PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_STORAGE):
+		if (d.usage & (PROPERTY_USAGE_SCRIPT_VARIABLE | PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_STORAGE)) != 0:
+			#print("Field recognized:", d.name)
+		#if d.usage == (PROPERTY_USAGE_SCRIPT_VARIABLE | PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_STORAGE):
 			if d.name.begins_with(BUTTON_PREFIX) and d.type == TYPE_STRING:
 				row_types.append("func_button")
 				rows.append(create_ui_row_func_button(d, obj))
@@ -100,7 +102,7 @@ func init():
 	for child in container.get_children():
 		container.remove_child(child)
 		child.queue_free()
-
+	
 	for i in range(objects.size()):
 		create_rows_from_object(i)
 
@@ -189,9 +191,9 @@ func create_ui_row_read_only(property:Dictionary) -> Control:
 	return init_ui_row(ui_row, property)
 
 func create_ui_row_comment(comment:String) -> Control:
-	var ui_row: PankuCommentRow = preload("./row_comment.tscn").instantiate()
+	var ui_row = preload("./row_comment.tscn").instantiate()
 	ui_row.console = console
-	ui_row.button.label.text = comment
+	ui_row.label.text = comment
 	return ui_row
 
 func create_ui_row_func_button(property:Dictionary, object:Object) -> Control:
