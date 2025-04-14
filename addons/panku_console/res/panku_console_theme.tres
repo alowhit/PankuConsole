@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=26 format=3 uid="uid://bk18yfu0d77wk"]
+[gd_resource type="Theme" load_steps=29 format=3 uid="uid://bk18yfu0d77wk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1q17k"]
 
@@ -33,6 +33,20 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.8, 0.8, 0.8, 0.0627451)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ao2wg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k87dp"]
+content_margin_left = 8.0
+bg_color = Color(0, 0, 0, 0.12549)
+border_width_left = 2
+border_color = Color(0.8, 0.8, 0.8, 0.25098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6hkt"]
+content_margin_left = 4.0
+draw_center = false
+border_width_left = 2
+border_color = Color(0.8, 0.8, 0.8, 0.12549)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66h6h"]
 bg_color = Color(1, 1, 1, 0.4)
@@ -113,6 +127,9 @@ Button/styles/focus = SubResource("StyleBoxEmpty_1q17k")
 Button/styles/hover = SubResource("StyleBoxFlat_j0iw5")
 Button/styles/normal = SubResource("StyleBoxFlat_2sv8t")
 Button/styles/pressed = SubResource("StyleBoxFlat_oko07")
+CodeEdit/styles/focus = SubResource("StyleBoxEmpty_ao2wg")
+CodeEdit/styles/normal = SubResource("StyleBoxFlat_k87dp")
+CodeEdit/styles/read_only = SubResource("StyleBoxFlat_x6hkt")
 HScrollBar/styles/grabber = SubResource("StyleBoxFlat_66h6h")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_io0fu")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_5a1x3")

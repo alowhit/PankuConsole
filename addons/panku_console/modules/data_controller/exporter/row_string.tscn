@@ -1,17 +1,43 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4jxqh4ysyodt"]
 
-[ext_resource type="Script" path="res://addons/panku_console/modules/data_controller/exporter/row_ui_string.gd" id="1_7ybqm"]
+[ext_resource type="Script" uid="uid://7gph1hnhxfil" path="res://addons/panku_console/modules/data_controller/exporter/row_ui_string.gd" id="1_7ybqm"]
 
-[node name="RowString" type="HBoxContainer" node_paths=PackedStringArray("line_edit")]
+[node name="RowString" type="HBoxContainer" node_paths=PackedStringArray("name_label_2", "code_edit", "revert_changed_button", "submit_changed_button")]
 script = ExtResource("1_7ybqm")
-line_edit = NodePath("LineEdit")
+name_label_2 = NodePath("VBoxContainer2/VName")
+code_edit = NodePath("VBoxContainer/CodeEdit")
+revert_changed_button = NodePath("VBoxContainer/HBoxContainer/Button_revert_as_last")
+submit_changed_button = NodePath("VBoxContainer/HBoxContainer/Button_submit")
 
 [node name="VName" type="Label" parent="."]
+visible = false
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 text = "value3"
 
-[node name="LineEdit" type="LineEdit" parent="."]
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VName" type="Label" parent="VBoxContainer2"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "value3"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "string value..."
+
+[node name="CodeEdit" type="CodeEdit" parent="VBoxContainer"]
+layout_mode = 2
+scroll_fit_content_height = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button_revert_as_last" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "revert changed"
+
+[node name="Button_submit" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "submit changed"
