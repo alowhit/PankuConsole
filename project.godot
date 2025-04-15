@@ -15,10 +15,10 @@ config/description="**Panku Console is a feature-packed real-time debugging tool
 
 Panku Console is designed to be modular and extensible, and it is easy to add and maintain features. It is also designed to be as unobtrusive as possible, so you can use it in your project without worrying about the impact on the final product."
 run/main_scene="res://example/main.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(1, 1, 1, 1)
-boot_splash/image="res://example/assets/bootsplash.png"
 boot_splash/fullsize=false
+boot_splash/image="res://example/assets/bootsplash.png"
 config/icon="res://addons/panku_console/logo.svg"
 
 [autoload]
@@ -32,6 +32,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="Panku Console"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/panku_console/plugin.cfg")
@@ -42,5 +46,5 @@ import/blender/enabled=false
 
 [rendering]
 
-environment/defaults/default_clear_color=Color(1, 1, 1, 1)
 anti_aliasing/quality/msaa_2d=3
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)

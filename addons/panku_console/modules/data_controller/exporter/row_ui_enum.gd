@@ -21,5 +21,11 @@ func _ready():
 
 func setup(params := []):
 	opt_btn.clear()
-	for p in params:
-		opt_btn.add_item(p)
+	for i : int in params.size():
+		var split = params[i].split(":", false)
+
+		# If key-value pair.
+		if split.size() > 1 and split[1].is_valid_int():
+			opt_btn.add_item(params[i], split[1].to_int())
+		else:
+			opt_btn.add_item(params[i], i)
