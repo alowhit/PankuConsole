@@ -5,6 +5,7 @@
 ### 🛠️🔧 Data Controller
 
 - [x] Make LineEdit as multi-line editor
+- [x] Fixed Enum Error when Enum has custom Integer
 - [ ] Make Array's content can be read and edit
 - [ ] and more... ?
 
