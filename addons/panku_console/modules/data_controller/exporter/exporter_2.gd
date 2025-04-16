@@ -193,7 +193,7 @@ func create_ui_row_read_only(property:Dictionary) -> Control:
 func create_ui_row_comment(comment:String) -> Control:
 	var ui_row = preload("./row_comment.tscn").instantiate()
 	ui_row.console = console
-	ui_row.label.text = comment
+	ui_row.button.label.text = comment
 	return ui_row
 
 func create_ui_row_func_button(property:Dictionary, object:Object) -> Control:
